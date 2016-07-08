@@ -15,6 +15,10 @@
 		1635A3411CC10B190072290C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1635A33F1CC10B190072290C /* LaunchScreen.storyboard */; };
 		1635A34C1CC10B190072290C /* base64____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A34B1CC10B190072290C /* base64____Tests.m */; };
 		1635A3571CC10B190072290C /* base64____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A3561CC10B190072290C /* base64____UITests.m */; };
+		1635A3671CC10B440072290C /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A3661CC10B440072290C /* NSArray+Log.m */; };
+		1635A36F1CC10B750072290C /* SSKeychain.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1635A3691CC10B750072290C /* SSKeychain.strings */; };
+		1635A3701CC10B750072290C /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A36C1CC10B750072290C /* SSKeychain.m */; };
+		1635A3711CC10B750072290C /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1635A36E1CC10B750072290C /* SSKeychainQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		1635A3521CC10B190072290C /* base64和钥匙串UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "base64和钥匙串UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1635A3561CC10B190072290C /* base64____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "base64____UITests.m"; sourceTree = "<group>"; };
 		1635A3581CC10B190072290C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1635A3651CC10B440072290C /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		1635A3661CC10B440072290C /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		1635A36A1CC10B750072290C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SSKeychain.strings; sourceTree = "<group>"; };
+		1635A36B1CC10B750072290C /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		1635A36C1CC10B750072290C /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		1635A36D1CC10B750072290C /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		1635A36E1CC10B750072290C /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +112,8 @@
 		1635A3301CC10B190072290C /* base64和钥匙串 */ = {
 			isa = PBXGroup;
 			children = (
+				1635A3681CC10B750072290C /* SSKeychain */,
+				1635A3641CC10B440072290C /* Log */,
 				1635A3341CC10B190072290C /* AppDelegate.h */,
 				1635A3351CC10B190072290C /* AppDelegate.m */,
 				1635A3371CC10B190072290C /* ViewController.h */,
@@ -138,6 +151,27 @@
 				1635A3581CC10B190072290C /* Info.plist */,
 			);
 			path = "base64和钥匙串UITests";
+			sourceTree = "<group>";
+		};
+		1635A3641CC10B440072290C /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				1635A3651CC10B440072290C /* NSArray+Log.h */,
+				1635A3661CC10B440072290C /* NSArray+Log.m */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		1635A3681CC10B750072290C /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				1635A3691CC10B750072290C /* SSKeychain.strings */,
+				1635A36B1CC10B750072290C /* SSKeychain.h */,
+				1635A36C1CC10B750072290C /* SSKeychain.m */,
+				1635A36D1CC10B750072290C /* SSKeychainQuery.h */,
+				1635A36E1CC10B750072290C /* SSKeychainQuery.m */,
+			);
+			path = SSKeychain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1635A36F1CC10B750072290C /* SSKeychain.strings in Resources */,
 				1635A3411CC10B190072290C /* LaunchScreen.storyboard in Resources */,
 				1635A33E1CC10B190072290C /* Assets.xcassets in Resources */,
 				1635A33C1CC10B190072290C /* Main.storyboard in Resources */,
@@ -271,8 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1635A3391CC10B190072290C /* ViewController.m in Sources */,
+				1635A3671CC10B440072290C /* NSArray+Log.m in Sources */,
 				1635A3361CC10B190072290C /* AppDelegate.m in Sources */,
 				1635A3331CC10B190072290C /* main.m in Sources */,
+				1635A3711CC10B750072290C /* SSKeychainQuery.m in Sources */,
+				1635A3701CC10B750072290C /* SSKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +360,14 @@
 				1635A3401CC10B190072290C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1635A3691CC10B750072290C /* SSKeychain.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1635A36A1CC10B750072290C /* en */,
+			);
+			name = SSKeychain.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
